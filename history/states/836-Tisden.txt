@@ -1,0 +1,29 @@
+state={
+	id=836
+	name="STATE_836"
+	provinces={
+		13390 13406 13410 13413 13416 13418 
+	}
+	manpower=3131099
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		victory_points = {
+			13413 20
+		}
+		victory_points = {
+			13418 3
+		}
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 3
+			dockyard = 2
+			13418 = {
+				naval_base = 3
+			}
+		}
+	}
+	
+	state_category = city
+}

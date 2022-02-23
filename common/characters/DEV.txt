@@ -1,0 +1,413 @@
+characters = {
+
+	DEV_Roaring_Seavey = {
+		name = DEV_Roaring_Seavey
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DEV/Portrait_Roaring_Seavey.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = moderatism
+			expire = "1965.1.1"
+			traits = { the_wisconsin_pirate }
+			id = 679
+		}
+	}
+
+	DEV_Princess_Alson = {
+		name = DEV_Princess_Alson
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DEV/Portrait_Princess_Alson.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1"
+			traits = { runaway_princess }
+		}
+	}
+
+	DEV_Gunner_Fernando = {
+		name = DEV_Gunner_Fernando
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/DEV/Portrait_Gunner_Fernando.dds"
+			}
+		}
+
+		country_leader = {
+			ideology = marxism
+			expire = "1965.1.1"
+			traits = { oceanic_liberator }
+		}
+	}
+
+	DEV_Holbrook_Swail = {
+		name = DEV_Holbrook_Swail
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+				small = "gfx/interface/ideas/idea_asia_generic_land_2.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { media_personality }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = DEV_Holbrook_Swail
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				army_chief_entrenchment_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Crusty_Kent = {
+		name = DEV_Crusty_Kent
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_europe_generic_land_19.dds"
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = DEV_Crusty_Kent
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Reaper_Grendel = {
+		name = DEV_Reaper_Grendel
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_europe_generic_land_19.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = DEV_Reaper_Grendel
+			ledger = army
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Vicious_Barrie = {
+		name = DEV_Vicious_Barrie
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_europe_generic_5.dds"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = DEV_Vicious_Barrie
+			ledger = air
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				air_airborne_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		advisor = {
+			slot = air_chief
+			idea_token = DEV_Vicious_Barrie
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				air_chief_ground_support_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_White_Beard_Stanley = {
+		name = DEV_White_Beard_Stanley
+		portraits = {
+			army = {
+				small = "Gfx/interface/ideas/idea_europe_generic_navy_2.dds"
+			}
+		}
+
+		advisor = {
+			slot = navy_chief
+			idea_token = DEV_White_Beard_Stanley
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				navy_chief_maneuver_1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Boris_Thatcher = {
+		name = DEV_Boris_Thatcher
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_asia_generic_warlord2.dds"
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = DEV_Boris_Thatcher
+			allowed = {
+				original_tag = DEV
+			}
+			ledger = army
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Blue_Twine = {
+		name = DEV_Blue_Twine
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_europe_generic_4.dds"
+			}
+		}
+
+		advisor = {
+			slot = theorist
+			idea_token = DEV_Blue_Twine
+			allowed = {
+				original_tag = DEV
+			}
+			ledger = navy
+			traits = {
+				naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	DEV_Sir_Robin = {
+		name = DEV_Sir_Robin
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Sir_Robin
+			allowed = {
+				original_tag = DEV
+			}
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							DEV_Corsair_Paine = {
+								is_character_slot = advisor
+							}
+							DEV_Haiden_Cooper = {
+								is_character_slot = advisor
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				ambitious_union_boss
+			}
+		}
+	}
+
+	DEV_Corsair_Paine = {
+		name = DEV_Corsair_Paine
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_asia_generic_land_1.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Corsair_Paine
+			allowed = {
+				original_tag = DEV
+			}
+			available = {
+				hidden_trigger = {
+					NOT = {
+						OR = {
+							DEV_Sir_Robin = {
+								is_character_slot = advisor
+							}
+						}
+						DEV_Haiden_Cooper = {
+							is_character_slot = advisor
+						}
+					}
+				}
+			}
+			traits = {
+				syncretic_revanchist
+			}
+		}
+	}
+
+	DEV_Gloomy_Graham = {
+		name = DEV_Gloomy_Graham
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_asia_generic_female_1.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Gloomy_Graham
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+
+	DEV_Haiden_Cooper = {
+		name = DEV_Haiden_Cooper
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_USA_generic_2.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Haiden_Cooper
+			allowed = {
+				original_tag = DEV
+			}
+			available = {
+				AND = {
+					NOT = {
+						has_war_with = USA
+					}
+					hidden_trigger = {
+						NOT = {
+							OR = {
+								DEV_Sir_Robin = {
+									is_character_slot = advisor
+								}
+								DEV_Corsair_Paine = {
+									is_character_slot = advisor
+								}
+							}
+						}
+					}
+				}
+			}
+			traits = {
+				staunch_monarchist
+			}
+		}
+	}
+
+	DEV_Crafty_Riley = {
+		name = DEV_Crafty_Riley
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Crafty_Riley
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				economist
+			}
+		}
+	}
+
+	DEV_Pretender_Thunder = {
+		name = DEV_Pretender_Thunder
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_generic_political_advisor_female_europe.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = DEV_Pretender_Thunder
+			allowed = {
+				original_tag = DEV
+			}
+			traits = {
+				fortification_engineer
+			}
+		}
+	}
+
+}

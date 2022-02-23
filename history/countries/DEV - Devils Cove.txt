@@ -1,0 +1,51 @@
+capital = 835
+oob = "DEV_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	early_fighter = 1
+	gw_artillery = 1
+	tech_support = 1
+	basic_train = 1
+}
+
+set_convoys = 35
+
+recruit_character = DEV_Roaring_Seavey
+recruit_character = DEV_Princess_Alson
+recruit_character = DEV_Gunner_Fernando
+recruit_character = DEV_Holbrook_Swail
+recruit_character = DEV_Crusty_Kent
+recruit_character = DEV_Reaper_Grendel
+recruit_character = DEV_Vicious_Barrie
+recruit_character = DEV_White_Beard_Stanley
+recruit_character = DEV_Boris_Thatcher
+recruit_character = DEV_Blue_Twine
+recruit_character = DEV_Sir_Robin
+recruit_character = DEV_Corsair_Paine
+recruit_character = DEV_Gloomy_Graham
+recruit_character = DEV_Haiden_Cooper
+recruit_character = DEV_Crafty_Riley
+recruit_character = DEV_Pretender_Thunder
+
+add_ideas = {
+	DEV_Treaty_Of_Eckwater
+	DEV_Oceanic_Marvel
+}
+
+set_stability = 0.28
+set_war_support = 0.36
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1924.2.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 73
+	communism = 14
+	democratic = 11
+	fascism = 2
+}

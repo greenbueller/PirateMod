@@ -1,0 +1,91 @@
+division_template = {
+    name = "Militia"
+    division_names_group = DEV_MIL_01   
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    }
+}
+
+division_template = {
+    name = "Infantry Division"
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+    }
+
+    priority = 1
+}
+
+units = {
+    # Otavin
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 1
+        }
+
+        location = 13317
+        division_template = "Militia"
+        start_experience_factor = 0.2
+    }
+
+    # Tisden
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 2
+        }
+
+        location = 13413
+        division_template = "Militia"
+        start_experience_factor = 0.2
+    }
+
+    # Porside
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 3
+        }
+
+        location = 13266
+        division_template = "Militia"
+        start_experience_factor = 0.2
+    }
+
+    # Heartland
+    division = {
+        division_name = {
+            is_name_ordered = yes
+            name_order = 4
+        }
+
+        location = 13340
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.2
+    }
+}
+
+instant_effect = {
+    
+    add_equipment_production = {
+        equipment = {
+            type = infantry_equipment_0
+            creator = "DEV"
+        }
+
+        requested_factories = 1
+        progress = 0.2
+        efficiency = 45
+    }
+}

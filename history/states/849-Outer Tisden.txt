@@ -1,0 +1,21 @@
+state={
+	id=849
+	name="STATE_849"
+	provinces={
+		13382 13386 13388 13389 13391 13392 13400 13401 13407 13411 13417 
+	}
+	manpower=728445
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			13417 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	state_category = town
+}

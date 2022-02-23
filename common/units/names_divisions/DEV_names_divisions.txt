@@ -1,0 +1,53 @@
+DEV_MIL_01 = {
+	name = "Militia"
+
+	for_countries = {
+		DEV
+	}
+
+	can_use = {
+		always = yes
+	}
+
+	division_types = {
+		"infantry"
+	}
+
+	fallback_name = "%dth Militia"
+
+	ordered = {
+		1 = { "Otavin Militia" }
+		2 = { "Tisden Militia" }
+		3 = { "Porside Militia" }
+		4 = { "Heartland Militia" }
+		5 = { "%dth Militia" }
+		68 = { "Presidential Guard" }
+		69 = { "Presidential Guard" }
+	}
+}
+
+DEV_INF_01 = {
+	name = "Infantry"
+
+	for_countries = {
+		DEV
+	}
+
+	can_use = {
+		always = yes
+	}
+
+	division_types = {
+		"infantry"
+	}
+
+	fallback_name = "%d Infantry Division"
+
+	ordered = {
+		1 = { "%d Inf." }
+		2 = { "%d Inf." }
+		3 = { "%d Inf." }
+		4 = { "%d Inf." }
+		5 = { "%d Inf." }
+	}
+}

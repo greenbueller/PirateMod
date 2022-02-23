@@ -1,0 +1,281 @@
+add_namespace = Devils_Cove
+
+country_event = {
+	id = Devils_Cove.1
+	title = Devils_Cove.1.t # The Fourth Otavin Congress
+	desc = Devils_Cove.1.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.1.a # Wonderful
+		add_political_power = 100
+	}
+}
+
+country_event = {
+	id = Devils_Cove.2
+	title = Devils_Cove.2.t # The Incident
+	desc = Devils_Cove.2.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.2.a # Allow The People To Speak
+		hidden_effect = {
+			random_list = {
+				60 = { # Civil
+					add_stability = 0.05
+
+					set_country_flag = listened
+				}
+
+				40 = { # Backfires
+					add_stability = -0.10
+
+					set_country_flag = fight
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Devils_Cove.2.b # Crush this uprising!
+		hidden_effect = {
+			random_list = {
+				55 = { # Backfires
+					add_stability = -0.10
+
+					set_country_flag = fight
+				}
+
+				40 = { # People Submit
+					add_stability = 0.05
+
+					set_country_flag = listened
+				}
+
+				5 = { # Desertion
+					add_manpower = -5000
+
+					set_country_flag = fight
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Devils_Cove.3
+	title = Devils_Cove.3.t # The Demands
+	desc = Devils_Cove.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.3.a # Give Into The People
+		unlock_national_focus = DEV_Concessions
+	}
+
+	option = {
+		name = Devils_Cove.3.b # These peasants know nothing
+		unlock_national_focus = DEV_Blood
+	}
+}
+
+country_event = {
+	id = Devils_Cove.4
+	title = Devils_Cove.4.t # The People's Voice
+	desc = Devils_Cove.4.d
+	picture = GFX_report_event_generic_rally_3
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.4.a # We stand in solidarity!
+		add_timed_idea = {
+			idea = DEV_Peoples_Voice_Spirit
+			days = 180
+		}
+	}
+}
+
+country_event = {
+	id = Devils_Cove.5
+	title = Devils_Cove.5.t # War Is
+	desc = Devils_Cove.5.d
+	picture = GFX_report_event_poland_funeral
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.5.a # War Is Forever
+		add_ideas = DEV_Eternal_War
+		hidden_effect = {
+			country_event = { id = Devils_Cove.6 }
+		}
+	}
+}
+
+country_event = {
+	id = Devils_Cove.6
+	title = Devils_Cove.6.t # The Peoples War
+	desc = Devils_Cove.6.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.6.a # Our Victory Is Guaranteed!
+		add_ideas = DEV_Victory_Outweigh_Losses
+		hidden_effect = {
+			country_event = { id = Devils_Cove.7 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = Devils_Cove.7
+	title = Devils_Cove.7.t # The War Begins Today!
+	desc = Devils_Cove.7.d
+	picture = GFX_report_event_gre_city_siege
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateString] Event Devils_Cove.7 (The War Begins Today!) Fired."
+	}
+
+	option = {
+		name = Devils_Cove.7.a
+		#start_civil_war = {
+		#	ideology = neutrality
+		#	ruling_party = communism
+		#	size = 0.6
+		#	#states = { 836 837 842 843 844 846 849 }
+		#	states = { 835 838 840 841 845 847 850 }
+		#}
+
+		#hidden_effect = {
+		#	836 = {
+		#		create_unit = {
+		#			division = "name = \"Presidential Brigrades\" division_template = \"Militia\" start_experience_factor = 0.2" owner = D04
+		#		}
+		#		create_unit = {
+		#			division = "name = \"Presidential Brigrades\" division_template = \"Militia\" start_experience_factor = 0.2" owner = D04
+		#		}
+		#	}
+		#}
+		835 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		838 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		840 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		841 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		845 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		847 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		850 = {
+			set_state_owner_to = DCW
+			add_core_of = DCW
+		}
+
+		DEV = {
+			set_politics = {
+				ruling_party = communism
+			}
+
+			declare_war_on = {
+				target = DCW
+				type = civil_war
+			}
+
+			delete_unit = {
+				state = 835
+				disband = no
+			}
+
+			delete_unit = {
+				state = 847
+				disband = no
+			}
+
+			set_capital = {
+				state = 836
+			}
+		}
+
+		836 = {
+			add_core_of = DCW
+		}
+
+		837 = {
+			add_core_of = DCW
+		}
+
+		842 = {
+			add_core_of = DCW
+		}
+
+		843 = {
+			add_core_of = DCW
+		}
+
+		844 = {
+			add_core_of = DCW
+		}
+
+		846 = {
+			add_core_of = DCW
+		}
+
+		849 = {
+			add_core_of = DCW
+		}
+
+		DCW = {
+			set_state_controller = 835
+			set_state_controller = 838
+			set_state_controller = 840
+			set_state_controller = 841
+			set_state_controller = 845
+			set_state_controller = 847
+			set_state_controller = 850
+
+			load_oob = "DCW_1936"
+
+			create_country_leader = {
+				name = "Roaring Seavey"
+				picture = "gfx/leaders/DEV/Portrait_Roaring_Seavey.dds"
+				ideology = moderatism
+				expire = "1965.1.1"
+				traits = { the_wisconsin_pirate }
+				id = 679
+			}
+		}
+	}
+}

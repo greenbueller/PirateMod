@@ -1,0 +1,2477 @@
+focus_tree = {
+	id = devils_cove_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = DEV
+		}
+	}
+
+	continuous_focus_position = {
+		x = 0
+		y = 2400
+	}
+
+	default = no
+
+	focus = {
+		id = DEV_Fourth_Otavin_Congress
+
+		x = 13
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+
+		completion_reward = {
+			country_event = { id = Devils_Cove.1 }
+		}
+	}
+
+	focus = {
+		id = DEV_The_Incident
+
+		relative_position_id = DEV_Fourth_Otavin_Congress
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Fourth_Otavin_Congress
+		}
+
+		completion_reward = {
+			country_event = { id = Devils_Cove.2 }
+		}
+	}
+
+	focus = {
+		id = DEV_The_Demands
+
+		relative_position_id = DEV_The_Incident
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Incident
+		}
+
+		completion_reward = {
+			country_event = { id = Devils_Cove.3 }
+		}
+	}
+
+	focus = {
+		id = DEV_Concessions
+
+		relative_position_id = DEV_The_Demands
+		x = -9
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Demands
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Blood
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Concessions_Given
+		}
+	}
+
+	focus = {
+		id = DEV_The_Peoples_Voice
+
+		relative_position_id = DEV_Concessions
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Concessions
+		}
+
+		completion_reward = {
+			country_event = { id = Devils_Cove.4 }
+		}
+
+	}
+
+	focus = {
+		id = DEV_Assemble_The_People
+		
+		relative_position_id = DEV_The_Peoples_Voice
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Peoples_Voice
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Peoples_Assembly
+		}
+	}
+
+	focus = {
+		id = DEV_Empower_The_Ironlanders
+
+		relative_position_id = DEV_The_Peoples_Voice
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Peoples_Voice
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Ironlanders
+		}
+	}
+
+	focus = {
+		id = DEV_Empower_Workers_Militia
+
+		relative_position_id = DEV_Assemble_The_People
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Assemble_The_People
+			focus = DEV_Empower_The_Ironlanders
+		}
+
+		mutually_exclusive = {
+			focus = DEV_United_Peaceful_Front
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Workers_Militia
+			hidden_effect = {
+				division_template = {
+					name = "Workers Militia"
+					division_names_group = DEV_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0	y = 0 }
+						infantry = { x = 1	y = 0 }
+						infantry = { x = 0	y = 1 }
+						infantry = { x = 1	y = 1 }
+						cavalry = { x = 2 y = 0 }
+					}
+				}
+
+				849 = {
+					create_unit = {
+						division = "name = \"Workers Militia\" division_template = \"Workers Militia\" start_experience_factor = 0.2" owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Workers Militia\" division_template = \"Workers Militia\" start_experience_factor = 0.2" owner = ROOT
+					}
+				}
+				846 = {
+					create_unit = {
+						division = "name = \"Workers Militia\" division_template = \"Workers Militia\" start_experience_factor = 0.2" owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Workers Militia\" division_template = \"Workers Militia\" start_experience_factor = 0.2" owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_United_Peaceful_Front
+
+		relative_position_id = DEV_Empower_The_Ironlanders
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Assemble_The_People
+			focus = DEV_Empower_The_Ironlanders
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Empower_Workers_Militia
+		}
+
+		completion_reward = {
+			add_ideas = DEV_United_Peaceful_Front_Spirit
+		}
+	}
+
+	focus = {
+		id = DEV_War_Is
+
+		relative_position_id = DEV_Empower_Workers_Militia
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Empower_Workers_Militia
+		}
+
+		completion_reward = {
+			country_event = { id = Devils_Cove.5 }
+		}
+	}
+
+	focus = {
+		id = DEV_Communal_System
+		
+		relative_position_id = DEV_United_Peaceful_Front
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_United_Peaceful_Front
+		}
+	}
+
+	focus = {
+		id = DEV_Form_Unions
+
+		relative_position_id = DEV_United_Peaceful_Front
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_United_Peaceful_Front
+		}
+	}
+
+	focus = {
+		id = DEV_Communist_Coup
+
+		relative_position_id = DEV_Communal_System
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Communal_System
+		}
+
+		prerequisite = {
+			focus = DEV_Form_Unions
+		}
+	}
+
+	focus = {
+		id = DEV_Revolution_Triumphant
+
+		relative_position_id = DEV_Communist_Coup
+		x = -2
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Communist_Coup
+			focus = DEV_War_Is
+		}
+	}
+
+	focus = {
+		id = DEV_Stabilize_WIA
+
+		relative_position_id = DEV_Revolution_Triumphant
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Revolution_Triumphant
+		}
+	}
+
+	focus = {
+		id = DEV_Quartz_Laws
+
+		relative_position_id = DEV_Stabilize_WIA
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Stabilize_WIA
+		}
+	}
+
+	focus = {
+		id = DEV_Suffrage_For_All
+
+		relative_position_id = DEV_Quartz_Laws
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Quartz_Laws
+		}
+	}
+
+	focus = {
+		id = DEV_Agrarian_Collectivization
+
+		relative_position_id = DEV_Quartz_Laws
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Quartz_Laws
+		}
+	}
+
+	focus = {
+		id = DEV_Universal_Education_Act
+
+		relative_position_id = DEV_Quartz_Laws
+
+		x = -1
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Suffrage_For_All
+		}
+	}
+
+	focus = {
+		id = DEV_Peoples_Communes
+
+		relative_position_id = DEV_Quartz_Laws
+		x = 1
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Agrarian_Collectivization
+		}
+	}
+
+	focus = {
+		id = DEV_Guaranteed_Workplace
+
+		relative_position_id = DEV_Quartz_Laws
+		x = 0
+		y = 3
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Universal_Education_Act
+		}
+
+		prerequisite = {
+			focus = DEV_Peoples_Communes
+		}
+	}
+
+	focus = {
+		id = DEV_Tisden_Congress
+
+		relative_position_id = DEV_Stabilize_WIA
+		x = 4
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Stabilize_WIA
+		}
+	}
+
+	focus = {
+		id = DEV_Our_Own_Path
+
+		relative_position_id = DEV_Tisden_Congress
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Tisden_Congress
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Global_Soviet
+		}
+	}
+
+	focus = {
+		id = DEV_Oceanic_Workers_Alliance
+
+		relative_position_id = DEV_Our_Own_Path
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Our_Own_Path
+		}
+
+		mutually_exclusive = {
+			focus = DEV_AntiFascist_Movement
+		}
+	}
+
+	focus = {
+		id = DEV_Spread_Revolution
+
+		relative_position_id = DEV_Oceanic_Workers_Alliance
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Oceanic_Workers_Alliance
+		}
+	}
+
+	focus = {
+		id = DEV_Oceania_United
+
+		relative_position_id = DEV_Oceanic_Workers_Alliance
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Spread_Revolution
+		}
+	}
+
+	focus = {
+		id = DEV_AntiFascist_Movement
+
+		relative_position_id = DEV_Our_Own_Path
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Our_Own_Path
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Oceanic_Workers_Alliance
+		}
+	}
+
+	focus = {
+		id = DEV_Pacific_Antifascist_Front
+
+		relative_position_id = DEV_AntiFascist_Movement
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_AntiFascist_Movement
+		}
+	}
+
+	focus = {
+		id = DEV_War_On_Scum
+
+		relative_position_id = DEV_Pacific_Antifascist_Front
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Pacific_Antifascist_Front
+		}
+	}
+
+	focus = {
+		id = DEV_Global_Soviet
+
+		relative_position_id = DEV_Tisden_Congress
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Tisden_Congress
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Our_Own_Path
+		}
+	}
+
+	focus = {
+		id = DEV_Soviet_Advisory_Committee
+		
+		relative_position_id = DEV_Global_Soviet
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Global_Soviet
+		}
+	}
+
+	focus = {
+		id = DEV_Blood
+
+		relative_position_id = DEV_The_Demands
+		x = 9
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Demands
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Concessions
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Fought_People
+		}
+	}
+
+	focus = {
+		id = DEV_Strong_Survive
+
+		relative_position_id = DEV_Blood
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Blood
+		}
+	}
+
+	focus = {
+		id = DEV_He_Who_Serves_Best
+
+		relative_position_id = DEV_Strong_Survive
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Strong_Survive
+		}
+	}
+
+	focus = {
+		id = DEV_The_Exiled
+
+		relative_position_id = DEV_He_Who_Serves_Best
+		x = -6
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_He_Who_Serves_Best
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Is_She
+		}
+	}
+
+	focus = {
+		id = DEV_Is_She
+
+		relative_position_id = DEV_He_Who_Serves_Best
+		x = 8
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_He_Who_Serves_Best
+		}
+
+		mutually_exclusive = {
+			focus = DEV_The_Exiled
+		}
+	}
+
+	focus = {
+		id = DEV_United_Front
+
+		relative_position_id = DEV_The_Exiled
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Exiled
+		}
+	}
+
+	focus = {
+		id = DEV_Subjugate_Unions
+
+		relative_position_id = DEV_United_Front
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_United_Front
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Work_With_Unions
+		}
+	}
+
+	focus = {
+		id = DEV_Work_With_Unions
+
+		relative_position_id = DEV_United_Front
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_United_Front
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Subjugate_Unions
+		}
+	}
+
+	focus = {
+		id = DEV_Otavin_Supremacy
+		
+		relative_position_id = DEV_Subjugate_Unions
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Subjugate_Unions
+		}
+	}
+
+	focus = {
+		id = DEV_Equality_Among_Cities
+
+		relative_position_id = DEV_Work_With_Unions
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Work_With_Unions
+		}
+	}
+
+	focus = {
+		id = DEV_Unite_CIP
+
+		relative_position_id = DEV_Otavin_Supremacy
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Otavin_Supremacy
+			focus = DEV_Equality_Among_Cities
+		}
+	}
+
+	focus = {
+		id = DEV_Neutrality_Act
+
+		relative_position_id = DEV_Otavin_Supremacy
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Otavin_Supremacy
+			focus = DEV_Equality_Among_Cities
+		}
+
+		mutually_exclusive = {
+			focus = DEV_War_Act
+		}
+	}
+
+	focus = {
+		id = DEV_War_Act
+
+		relative_position_id = DEV_Equality_Among_Cities
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Equality_Among_Cities
+			focus = DEV_Otavin_Supremacy
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Neutrality_Act
+		}
+	}
+
+	focus = {
+		id = DEV_Father_New_Era
+
+		relative_position_id = DEV_Unite_CIP
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Unite_CIP
+		}
+	}
+
+	focus = {
+		id = DEV_Deterrence
+
+		relative_position_id = DEV_Neutrality_Act
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Neutrality_Act
+		}
+	}
+
+	focus = {
+		id = DEV_Operation_Victor
+
+		relative_position_id = DEV_Deterrence
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Deterrence
+		}
+	}
+
+	focus = {
+		id = DEV_Volunteer_Corp
+
+		relative_position_id = DEV_War_Act
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_War_Act
+		}
+	}
+
+	focus = {
+		id = DEV_Office_Of_Vengence
+
+		relative_position_id = DEV_Volunteer_Corp
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Volunteer_Corp
+		}
+	}
+
+	focus = {
+		id = DEV_Brighter_Future
+
+		relative_position_id = DEV_Operation_Victor
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Operation_Victor
+			focus = DEV_Office_Of_Vengence
+		}
+	}
+
+	focus = {
+		id = DEV_Greater_Purpose
+
+		relative_position_id = DEV_Brighter_Future
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Brighter_Future
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Look_Closer
+		}
+	}
+
+	focus = {
+		id = DEV_Freedom
+
+		relative_position_id = DEV_Greater_Purpose
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Greater_Purpose
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Fascist_Threat
+
+		relative_position_id = DEV_Freedom
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Freedom
+		}
+	}
+
+	focus = {
+		id = DEV_Communist_Threat
+
+		relative_position_id = DEV_Freedom
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Freedom
+		}
+	}
+
+	focus = {
+		id = DEV_Joint_Allied_Training_Missions
+
+		relative_position_id = DEV_Freedom
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = DEV_Freedom
+		}
+	}
+
+	focus = {
+		id = DEV_Dominance
+
+		relative_position_id = DEV_Greater_Purpose
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Greater_Purpose
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Freedom
+		}
+	}
+
+	focus = {
+		id = DEV_Attack_Imperialists
+
+		relative_position_id = DEV_Dominance
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Look_Closer
+
+		relative_position_id = DEV_Brighter_Future
+		x = 4
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Brighter_Future
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Greater_Purpose
+		}
+	}
+
+	focus = {
+		id = DEV_Oceanic_Invitations
+
+		relative_position_id = DEV_Look_Closer
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = DEV_Look_Closer
+		}
+	}
+
+	focus = {
+		id = DEV_Continental_Invitations
+
+		relative_position_id = DEV_Look_Closer
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = DEV_Look_Closer
+		}
+	}
+
+	focus = {
+		id = DEV_Work_One_Work_All
+
+		relative_position_id = DEV_Oceanic_Invitations
+		x = 1
+		y = 1
+		
+		prerequisite = {
+			focus = DEV_Oceanic_Invitations
+			focus = DEV_Continental_Invitations
+		}
+	}
+
+	focus = {
+		id = DEV_The_Soldier
+
+		relative_position_id = DEV_Is_She
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Is_She
+		}
+
+		mutually_exclusive = {
+			focus = DEV_The_Poet
+		}
+	}
+
+	focus = {
+		id = DEV_The_Poet
+
+		relative_position_id = DEV_Is_She
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Is_She
+		}
+
+		mutually_exclusive = {
+			focus = DEV_The_Soldier
+		}
+	}
+
+	focus = {
+		id = DEV_Great_Revival
+
+		relative_position_id = DEV_The_Soldier
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Soldier
+		}
+	}
+
+	focus = {
+		id = DEV_Foreign_Missions
+
+		relative_position_id = DEV_The_Poet
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Poet
+		}
+	}
+
+	focus = {
+		id = DEV_Royalist_Coup
+
+		relative_position_id = DEV_Is_She
+		x = 0
+		y = 3
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Great_Revival
+			focus = DEV_Foreign_Missions
+		}
+	}
+
+	focus = {
+		id = DEV_Her_New_Order
+
+		relative_position_id = DEV_Royalist_Coup
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = DEV_Royalist_Coup
+		}
+	}
+
+	focus = {
+		id = DEV_Royal_Officer_Corp
+
+		relative_position_id = DEV_Her_New_Order
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = DEV_Her_New_Order
+		}
+	}
+
+	focus = {
+		id = DEV_Covian_Nationalism
+
+		relative_position_id = DEV_Her_New_Order
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = DEV_Her_New_Order
+		}
+	}
+
+	focus = {
+		id = DEV_Matter_Of_Constitution
+
+		relative_position_id = DEV_Royal_Officer_Corp
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Royal_Officer_Corp
+		}
+
+		prerequisite = {
+			focus = DEV_Covian_Nationalism
+		}
+	}
+
+	focus = {
+		id = DEV_Porside_Parliament
+
+		relative_position_id = DEV_Matter_Of_Constitution
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Matter_Of_Constitution
+		}
+
+		mutually_exclusive = {
+			focus = DEV_The_Imperium
+		}
+	}
+
+	focus = {
+		id = DEV_Constitutional_Guarantees
+
+		relative_position_id = DEV_Porside_Parliament
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Porside_Parliament
+		}
+	}
+
+	focus = {
+		id = DEV_Republic_Monarchist_Characteristics
+
+		relative_position_id = DEV_Constitutional_Guarantees
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Constitutional_Guarantees
+			focus = DEV_Time_To_Shine
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Fair_Monarch
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Assume_Supreme_Power
+		}
+	}
+
+	focus = {
+		id = DEV_A_New_Republic
+
+		relative_position_id = DEV_Republic_Monarchist_Characteristics
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Republic_Monarchist_Characteristics
+		}
+	}
+
+	focus = {
+		id = DEV_Work_Great_Powers
+
+		relative_position_id = DEV_A_New_Republic
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_A_New_Republic
+			focus = DEV_Coronation_Ceremony
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Neutrality_League
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Asian_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Antifascist_Movement_Monarchy
+
+		relative_position_id = DEV_Work_Great_Powers
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Work_Great_Powers
+		}
+	}
+
+	focus = {
+		id = DEV_Anticommunist_Movement
+
+		relative_position_id = DEV_Work_Great_Powers
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Work_Great_Powers
+		}
+	}
+
+	focus = {
+		id = DEV_Request_Imperial_Territories
+
+		relative_position_id = DEV_Work_Great_Powers
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Work_Great_Powers
+		}
+	}
+
+	focus = {
+		id = DEV_The_Imperium
+		
+		relative_position_id = DEV_Matter_Of_Constitution
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Matter_Of_Constitution
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Porside_Parliament
+		}
+	}
+
+	focus = {
+		id = DEV_Time_To_Shine
+
+		relative_position_id = DEV_The_Imperium
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Imperium
+		}
+	}
+
+	focus = {
+		id = DEV_Fair_Monarch
+
+		relative_position_id = DEV_Constitutional_Guarantees
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Constitutional_Guarantees
+			focus = DEV_Time_To_Shine
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Republic_Monarchist_Characteristics
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Assume_Supreme_Power
+		}
+	}
+
+	focus = {
+		id = DEV_Coronation_Ceremony
+
+		relative_position_id = DEV_Fair_Monarch
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Fair_Monarch
+		}
+	}
+
+	focus = {
+		id = DEV_Assume_Supreme_Power
+
+		relative_position_id = DEV_Time_To_Shine
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Constitutional_Guarantees
+			focus = DEV_Time_To_Shine
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Fair_Monarch
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Republic_Monarchist_Characteristics
+		}
+	}
+
+	focus = {
+		id = DEV_Great_Campaign
+
+		relative_position_id = DEV_Assume_Supreme_Power
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Assume_Supreme_Power
+		}
+	}
+
+	focus = {
+		id = DEV_Neutrality_League
+
+		relative_position_id = DEV_Coronation_Ceremony
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_A_New_Republic
+			focus = DEV_Coronation_Ceremony
+			focus = DEV_Great_Campaign
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Work_Great_Powers
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Asian_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Deterrence_Monarchist
+
+		relative_position_id = DEV_Neutrality_League
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Neutrality_League
+		}
+	}
+
+	focus = {
+		id = DEV_Invite_Others
+
+		relative_position_id = DEV_Neutrality_League
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Neutrality_League
+		}
+	}
+
+	focus = {
+		id = DEV_Shared_Intellectual_Advancements
+
+		relative_position_id = DEV_Neutrality_League
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Deterrence_Monarchist
+		}
+
+		prerequisite = {
+			focus = DEV_Invite_Others
+		}
+	}
+
+	focus = {
+		id = DEV_Asian_Dominance
+
+		relative_position_id = DEV_Great_Campaign
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Coronation_Ceremony
+			focus = DEV_Great_Campaign
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Neutrality_League
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Work_Great_Powers
+		}
+	}
+
+	focus = {
+		id = DEV_Purge_Imperialists
+
+		relative_position_id = DEV_Asian_Dominance
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Asian_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Red_Menace
+
+		relative_position_id = DEV_Asian_Dominance
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Asian_Dominance
+		}
+	}
+
+	focus = {
+		id = DEV_Godbow_Plans
+
+		x = 35
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Godbow_Plans_Initiated
+			hidden_effect = {
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 2
+					category = industry
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Shanty_Plan
+
+		relative_position_id = DEV_Godbow_Plans
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Godbow_Plans
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = no
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = no
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Greenwater_Plan
+
+		relative_position_id = DEV_Godbow_Plans
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Godbow_Plans
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Great_Connection
+
+		relative_position_id = DEV_Shanty_Plan
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Shanty_Plan
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Devout_Islet_Line
+
+		relative_position_id = DEV_Great_Connection
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Great_Connection
+		}
+
+		completion_reward = {
+			build_railway = {
+				path = {
+					13298 13306 13302 13303 13314 13327 13342 13361
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Nakami_Line
+		
+		relative_position_id = DEV_Great_Connection
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Great_Connection
+		}
+
+		completion_reward = {
+			build_railway = {
+				path = {
+					13342 13316 13343 13353 13363
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Bluegrass_Plan
+
+		relative_position_id = DEV_Greenwater_Plan
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Greenwater_Plan
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Magic_Spear_Plan
+
+		relative_position_id = DEV_Nakami_Line
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Nakami_Line
+			focus = DEV_Devout_Islet_Line
+		}
+
+		prerequisite = {
+			focus = DEV_Bluegrass_Plan
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = DEV_Magic_Spear_Rebuilding_Project
+		}
+	}
+
+	focus = {
+		id = DEV_University_Of_Otavin
+
+		relative_position_id = DEV_Magic_Spear_Plan
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Magic_Spear_Plan
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = DEV_School_Of_Deterrence
+
+		relative_position_id = DEV_University_Of_Otavin
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_University_Of_Otavin
+		}
+
+		mutually_exclusive = {
+			focus = DEV_School_Of_Assailment
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_School_Of_Assailment
+
+		relative_position_id = DEV_University_Of_Otavin
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_University_Of_Otavin
+		}
+
+		mutually_exclusive = {
+			focus = DEV_School_Of_Deterrence
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = rocketry
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Department_Of_Armaments
+
+		x = 50
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			add_ideas = DEV_Department_Of_Armaments_Spirit
+		}
+	}
+
+	focus = {
+		id = DEV_Revise_Treaty_Eckwater
+
+		relative_position_id = DEV_Department_Of_Armaments
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Department_Of_Armaments
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = DEV_Treaty_Of_Eckwater_II
+				remove_idea = DEV_Treaty_Of_Eckwater
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Key_To_Skies
+
+		relative_position_id = DEV_Revise_Treaty_Eckwater
+		x = -7
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Revise_Treaty_Eckwater
+		}
+
+		completion_reward = {
+			air_experience = 20
+		}
+	}
+
+	focus = {
+		id = DEV_Air_Infrastructure_Program
+
+		relative_position_id = DEV_Key_To_Skies
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Key_To_Skies
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = air_base
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					AND = {
+						free_building_slots = {
+							building = air_base
+							size > 0
+							include_locked = yes
+						}
+
+						hidden_trigger = {
+							NOT = {
+								has_state_flag = undevelopable
+							}
+						}
+					}
+				}
+				
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Dominance_In_Sky
+
+		relative_position_id = DEV_Air_Infrastructure_Program
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Air_Infrastructure_Program
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Dominance_On_Ground
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dominance_sky
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Dominance_On_Ground
+
+		relative_position_id = DEV_Air_Infrastructure_Program
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Air_Infrastructure_Program
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Dominance_In_Sky
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dominance_ground
+				bonus = 0.5
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Air_Theory
+
+		relative_position_id = DEV_Air_Infrastructure_Program
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Air_Infrastructure_Program
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_theory
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Assist_Troops
+
+		relative_position_id = DEV_Dominance_In_Sky
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Dominance_In_Sky
+			focus = DEV_Dominance_On_Ground
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = assist_troops
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+				category = cat_scout_plane
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Assist_Navy
+
+		relative_position_id = DEV_Dominance_On_Ground
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = DEV_Dominance_In_Sky
+			focus = DEV_Dominance_On_Ground
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = assist_navy
+				bonus = 0.5
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_The_Academy
+
+		relative_position_id = DEV_Revise_Treaty_Eckwater
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Revise_Treaty_Eckwater
+		}
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = DEV_Restoration
+
+		relative_position_id = DEV_The_Academy
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Academy
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = DEV_Army_Restoration
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Special_Forces
+		
+		relative_position_id = DEV_The_Academy
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_The_Academy
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Our_New_Goals
+
+		relative_position_id = DEV_Restoration
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Restoration
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = new_goals
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Power_In_Force
+
+		relative_position_id = DEV_Our_New_Goals
+		x = -1
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Our_New_Goals
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Power_In_Movement
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = power_in_force
+				bonus = 0.5
+				uses = 2
+				category = artillery
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_A_Powerful_Thrust
+		
+		relative_position_id = DEV_Power_In_Force
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Power_In_Force
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Powerful_Thrust
+		}
+	}
+
+	focus = {
+		id = DEV_Power_In_Movement
+
+		relative_position_id = DEV_Our_New_Goals
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = {
+			focus = DEV_Our_New_Goals
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Power_In_Force
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = speed
+				bonus = 0.5
+				uses = 2
+				category = infantry_tech
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Move_Quicker_Shoot
+
+		relative_position_id = DEV_Power_In_Movement
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Power_In_Movement
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Speed
+		}
+	}
+
+	focus = {
+		id = DEV_Our_Great_Floatilla
+
+		relative_position_id = DEV_Revise_Treaty_Eckwater
+		x = 7
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Revise_Treaty_Eckwater
+		}
+
+		completion_reward = {
+			navy_experience = 20
+		}
+	}
+
+	focus = {
+		id = DEV_Attack_Quick_Hidden
+
+		relative_position_id = DEV_Our_Great_Floatilla
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Our_Great_Floatilla
+		}
+
+		mutually_exclusive = {
+			focus = DEV_All_Out_Strike
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_small
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Under_Seas
+
+		relative_position_id = DEV_Attack_Quick_Hidden
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Attack_Quick_Hidden
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = submarines
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_All_Out_Strike
+
+		relative_position_id = DEV_Our_Great_Floatilla
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Our_Great_Floatilla
+		}
+
+		mutually_exclusive = {
+			focus = DEV_Attack_Quick_Hidden
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_large
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+				category = cv_tech
+				category = bc_tech
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Naval_Support_Planes
+
+		relative_position_id = DEV_All_Out_Strike
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_All_Out_Strike
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = navy_planes
+				bonus = 0.5
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Develop_The_Backbone
+
+		relative_position_id = DEV_Our_Great_Floatilla
+		x = 0
+		y = 3
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Under_Seas
+			focus = DEV_Naval_Support_Planes
+		}
+
+		completion_reward = {
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = no
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = no
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_Blackwater_Ports
+
+		relative_position_id = DEV_Develop_The_Backbone
+		x = -2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Develop_The_Backbone
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Blackwater_Ports_Tooltip
+			hidden_effect = {
+				837 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 13266
+					}
+
+					add_extra_state_shared_building_slots = 1
+				}
+
+				836 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 13418
+					}
+
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DEV_School_Of_Naval_Theory
+
+		relative_position_id = DEV_Develop_The_Backbone
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = DEV_Develop_The_Backbone
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_theory
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+}

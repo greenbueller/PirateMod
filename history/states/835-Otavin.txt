@@ -1,0 +1,33 @@
+
+state={
+	id=835
+	name="STATE_835"
+	provinces={
+		13313 13317 13323 13328 13329 
+	}
+	manpower=7328627
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		victory_points = {
+			13317 25
+		}
+		victory_points = {
+			13313 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 4
+			13317 = {
+				coastal_bunker = 5
+				bunker = 2
+				naval_base = 2
+			}
+
+		}
+	}
+
+	state_category = large_city
+}

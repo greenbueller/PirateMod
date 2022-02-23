@@ -1,0 +1,23 @@
+state={
+	id=839
+	name="STATE_839"
+	provinces={
+		13270 13271 13280 13284 13286 13289 13294 13297 13302 13306 
+	}
+	manpower=13272
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		buildings = {
+			infrastructure = 1
+		}
+
+		set_state_flag = undevelopable
+	}
+
+	resources = {
+		aluminium = 12
+		steel = 8
+	}
+	state_category = pastoral
+}

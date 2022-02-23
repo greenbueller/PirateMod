@@ -1,0 +1,20 @@
+defined_text = {
+	name = DEV_Demands
+	text = {
+		trigger = {
+			original_tag = DEV
+			has_country_flag = listened
+		}
+
+		localization_key = DEV_LISTENED_DEMANDS
+	}
+
+	text = {
+		trigger = {
+			original_tag = DEV
+			has_country_flag = fight
+		}
+
+		localization_key = DEV_FIGHT_DEMANDS
+	}
+}

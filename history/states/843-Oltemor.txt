@@ -1,0 +1,17 @@
+state={
+	id=843
+	name="STATE_843"
+	provinces={
+		13261 13264 13267 13268 13272 13274 13275 13276 13277 13281 13282 13283 13285 13287 13295 
+	}
+	manpower=774134
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	state_category = town
+}

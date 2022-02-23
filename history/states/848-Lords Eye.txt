@@ -1,0 +1,19 @@
+state={
+	id=848
+	name="STATE_848"
+	provinces={
+		13393 13397 13402 13403 13408 13412 13414 13419 13420 13421 
+	}
+	manpower=507863
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		buildings = {
+			infrastructure = 2
+			13408 = {
+				bunker = 3
+			}
+		}
+	}
+	state_category = town
+}

@@ -1,0 +1,9 @@
+spriteTypes = {
+	
+
+	spriteType = {
+		name = "GFX_idea_DEV_Oceanic_Marvel"
+		texturefile = "gfx/interface/ideas/DEV_Oceanic_Marvel.dds"
+	}
+
+}

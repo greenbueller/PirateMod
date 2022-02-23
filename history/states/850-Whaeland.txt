@@ -1,0 +1,25 @@
+state={
+	id=850
+	name="STATE_850"
+	provinces={
+		13312 13316 13326 13337 13343 13346 13347 13351 13353 13362 13363 13367 13368 13375 13376 13380 13381 
+	}
+	manpower=1185231
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		victory_points = {
+			13363 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	resources = {
+		steel = 2
+	}
+
+	state_category = town
+}

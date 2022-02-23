@@ -1,0 +1,24 @@
+state={
+	id=847
+	name="STATE_847"
+	provinces={
+		13278 13320 13340 13354 13359 13371 13373 13378 13379 13383 13384 13394 13395 13404 
+	}
+	manpower=773623
+	history = {
+		owner = DEV
+		add_core_of = DEV
+		victory_points = {
+			13404 10
+		}
+		victory_points = {
+			13354 1
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+	}
+
+	state_category = large_town
+}
