@@ -23,6 +23,8 @@ state={
 				naval_base = 3
 			}
 		}
+
+		set_state_flag = DEV_Developed
 	}
 	
 	state_category = city

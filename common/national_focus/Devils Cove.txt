@@ -451,7 +451,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			remove_idea = DEV_Divided_WIA
+			remove_ideas = DEV_Divided_WIA
 		}
 	}
 
@@ -466,6 +466,10 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Stabilize_WIA
 		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 
 	focus = {
@@ -479,6 +483,10 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Quartz_Laws
 		}
+
+		completion_reward = {
+			add_ideas = DEV_Universal_Suffrage
+		}
 	}
 
 	focus = {
@@ -491,6 +499,21 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = DEV_Quartz_Laws
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = DEV
+					is_core_of = DEV
+					NOT = {
+						has_state_flag = undevelopable
+						has_state_flag = DEV_Developed
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 
@@ -506,6 +529,10 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Suffrage_For_All
 		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	focus = {
@@ -518,6 +545,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Agrarian_Collectivization
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Peoples_Communes
 		}
 	}
 
@@ -535,6 +566,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Peoples_Communes
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Guaranteed_Workplace_Spirit
 		}
 	}
 

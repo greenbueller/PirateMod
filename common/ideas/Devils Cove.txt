@@ -265,6 +265,58 @@ ideas = {
 				political_power_factor = -0.03
 			}
 		}
+
+		DEV_Universal_Suffrage = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		DEV_Peoples_Communes = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.03
+				stability_factor = 0.05
+				drift_defence_factor = 0.03
+			}
+		}
+
+		DEV_Guaranteed_Workplace_Spirit = {
+			allowed = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.15
+				conscription_factor = -0.03
+			}
+		}
 	}
 
 

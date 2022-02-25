@@ -27,6 +27,8 @@ state={
 			}
 
 		}
+
+		set_state_flag = DEV_Developed
 	}
 
 	state_category = large_city

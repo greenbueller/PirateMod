@@ -24,6 +24,8 @@ state={
 				coastal_bunker = 2
 			}
 		}
+
+		set_state_flag = DEV_Developed
 	}
 
 	state_category = city
