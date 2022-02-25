@@ -97,6 +97,8 @@
  DEV_Eternal_War:0 "Eternal War"
  DEV_Victory_Outweigh_Losses:0 "Our Victory Outweights Our Losses!"
  DEV_Peoples_Voice_Spirit:0 "The Peope's Voice"
+ DEV_Workers_Unions:0 "Workers Unions"
+ DEV_Divided_WIA:0 "Divided WIA"
 
 
  # Focuses
@@ -255,6 +257,7 @@
  DEV_Concessions_Given:0 "§8We will give into the demands on the people.§!"
  DEV_Fought_People:0 "§tWe refuse to accept the demands of the people, and will fight to the end!§!"
  DEV_Workers_Militia:0 "Four §YWorkers Militia§! units will be assembled."
+ DEV_Coup_Failure:0 "The Communist Coup has §tfailed§!, plunging us into a §RCivil War§!!"
 
  cat_scout_plane:0 "Scout Plane models"
 

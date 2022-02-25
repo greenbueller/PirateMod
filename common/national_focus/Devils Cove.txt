@@ -101,8 +101,10 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = Devils_Cove.4 }
+			hidden_effect = {
+				add_ideas = DEV_Divided_WIA
+			}
 		}
-
 	}
 
 	focus = {
@@ -242,6 +244,13 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_United_Peaceful_Front
 		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
 	}
 
 	focus = {
@@ -254,6 +263,10 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = DEV_United_Peaceful_Front
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Workers_Unions
 		}
 	}
 
@@ -272,6 +285,134 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Form_Unions
 		}
+
+		available = {
+			communism > 0.4
+		}
+
+		completion_reward = {
+			random_list = {
+				60 = {
+					set_politics = {
+						ruling_party = communism
+					}
+				}
+
+				40 = {
+					custom_effect_tooltip = DEV_Coup_Failure
+					hidden_effect = {
+						835 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						838 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						840 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						841 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						845 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						847 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						850 = {
+							set_state_owner_to = DCW
+							add_core_of = DCW
+						}
+
+						DEV = {
+							set_politics = {
+								ruling_party = communism
+							}
+
+							declare_war_on = {
+								target = DCW
+								type = civil_war
+							}
+
+							delete_unit = {
+								state = 835
+								disband = no
+							}
+
+							delete_unit = {
+								state = 847
+								disband = no
+							}
+
+							set_capital = {
+								state = 836
+							}
+						}
+
+						836 = {
+							add_core_of = DCW
+						}
+
+						837 = {
+							add_core_of = DCW
+						}
+
+						842 = {
+							add_core_of = DCW
+						}
+
+						843 = {
+							add_core_of = DCW
+						}
+
+						844 = {
+							add_core_of = DCW
+						}
+
+						846 = {
+							add_core_of = DCW
+						}
+
+						849 = {
+							add_core_of = DCW
+						}
+
+						DCW = {
+							set_state_controller = 835
+							set_state_controller = 838
+							set_state_controller = 840
+							set_state_controller = 841
+							set_state_controller = 845
+							set_state_controller = 847
+							set_state_controller = 850
+
+							load_oob = "DCW_1936"
+
+							create_country_leader = {
+								name = "Roaring Seavey"
+								picture = "gfx/leaders/DEV/Portrait_Roaring_Seavey.dds"
+								ideology = moderatism
+								expire = "1965.1.1"
+								traits = { the_wisconsin_pirate }
+								id = 679
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -286,6 +427,15 @@ focus_tree = {
 			focus = DEV_Communist_Coup
 			focus = DEV_War_Is
 		}
+
+		available = {
+			has_war = no
+			has_government = communism
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 
 	focus = {
@@ -298,6 +448,10 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Revolution_Triumphant
+		}
+
+		completion_reward = {
+			remove_idea = DEV_Divided_WIA
 		}
 	}
 
