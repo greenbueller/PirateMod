@@ -279,3 +279,45 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = Devils_Cove.8
+	title = Devils_Cove.8.t # Invite to OWA
+	desc = Devils_Cove.8.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.8.a # Accept
+
+		DEV = {
+			add_to_faction = ROOT
+		}
+	}
+
+	option = {
+		name = Devils_Cove.8.b # Decline
+	}
+}
+
+country_event = {
+	id = Devils_Cove.9
+	title = Devils_Cove.9.t # Request to join [ROOT.GetFactionName]
+	desc = Devils_Cove.9.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.8.a # Accept
+
+		ROOT = {
+			add_to_faction = DEV
+		}
+	}
+
+	option = {
+		name = Devils_Cove.8.b # Decline
+	}
+}

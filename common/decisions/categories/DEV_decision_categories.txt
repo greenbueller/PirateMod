@@ -10,3 +10,16 @@ DEV_Magic_Spear_Rebuilding_Project = {
 		has_completed_focus = DEV_Magic_Spear_Plan
 	}
 }
+
+DEV_Spread_Revolution_Category = {
+
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = DEV
+	}
+
+	visible = {
+		has_completed_focus = DEV_Spread_Revolution
+	}
+}

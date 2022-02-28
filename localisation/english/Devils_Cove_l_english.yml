@@ -102,6 +102,9 @@
  DEV_Universal_Suffrage:0 "Universal Suffrage"
  DEV_Peoples_Communes:0 "People's Communes"
  DEV_Guaranteed_Workplace_Spirit:0 "A Guaranted Workplace"
+ DEV_Covian_Freedom:0 "Covian Freedom"
+ DEV_Revolution:0 "Revolutionary Ideals"
+ DEV_PAFF:0 "Pacific Anti-Fascist Front"
 
 
  # Focuses
@@ -237,7 +240,7 @@
  DEV_Blackwater_Ports:0 "Develop Our Blackwater Ports"
  DEV_School_Of_Naval_Theory:0 "The School Of Naval Theory"
 
- # Decisions and Tooltips
+ # Decisions, Tooltips, and Other
  DEV_Godbow_Plans_Initiated:0 "§5The Godbow Plans§! will be initiated."
  DEV_Magic_Spear_Rebuilding_Project:0 "The Magic Spear Rebuilding Project"
  DEV_Civillian_Projects:0 "Civillian Development"
@@ -260,7 +263,17 @@
  DEV_Concessions_Given:0 "§8We will give into the demands on the people.§!"
  DEV_Fought_People:0 "§tWe refuse to accept the demands of the people, and will fight to the end!§!"
  DEV_Workers_Militia:0 "Four §YWorkers Militia§! units will be assembled."
- DEV_Coup_Failure:0 "The Communist Coup has §tfailed§!, plunging us into a §RCivil War§!!"
+ DEV_Coup_Failure:0 "the Communist Coup §tfailing§!, plunging us into a §RCivil War§!!"
+ DEV_OWA:0 "Oceanic Workers Alliance"
+ DEV_Spread_Revolution_Category:0 "Spread The Revolution"
+ DEV_Encourage_Revolution_In_Australia:0 "Encourage Revolution in Australia"
+ DEV_Encourage_Revolution_NZL:0 "Encourage Revolution in New Zealand"
+ DEV_Encourage_Revolution_Chile:0 "Encourage Revolution in Chile"
+ DEV_Encourage_Revolution_PRU:0 "Encourage Revolution in Peru"
+ DEV_Encourage_Revolution_ECU:0 "Encourage Revolution in Ecuador"
+ DEV_Encourage_Revolution_COL:0 "Encourage Revolution in Colombia"
+ DEV_Encourage_Revolution_PHI:0 "Encourage Revolution in the Philippines"
+ DEV_Oceania_United_TT:0 "All Oceanic nations will be invited to our faction"
 
  cat_scout_plane:0 "Scout Plane models"
 
@@ -292,4 +305,29 @@
  Devils_Cove.7.t:0 "The War Begins Today!"
  Devils_Cove.7.d:0 "Days after Representative Fernando's speech in Golden Plaza, yet another speech is called, this time outside the Governor's Mansion in Greater Tisden. Representative Fernando stands atop a hastily constructed platform, with armed members of the WIA behind him to prevent any federal intervention by the Governor. As people begin to file around the box, a respectful distance from the great orator, he begins his speech, the one that will start a new era. \"To the people of Devils Cove, we have been subject to the Capitalist boot for far too long! Today, we rise up against the bourgeoisie! Today, we fight for our rights! Today, we form our own Republic, one ruled by the people, for the people, by the people! Today, we go to war! Fight for your rights, comrades. We have nothing to lose but our chains!\" The crowd erupts in yelling as the now-President Fernando walks away with his escort, into a carriage waiting nearby, and leaves the crowd to their fervor."
  Devils_Cove.7.a:0 "To War We Go!"
+ Devils_Cove.8.t:0 "An Invitation"
+ Devils_Cove.8.d:0 "Hours ago, a delegation arrived from the Tisden Worker's Republic. After they were settled, they requested a meeting with [ROOT.GetLeader]. During this meeting, they proposed that we join the new military and economic alliance formed called the Oceanic Workers Alliance. They patiently await our decision."
+ Devils_Cove.8.a:0 "We accept"
+ Devils_Cove.8.b:0 "We decline"
+ Devils_Cove.9.t:0 "Request to join [ROOT.GetFactionName]"
+ Devils_Cove.9.d:0 "Hours ago, a delegation arrived from the Tisden Worker's Republic. After they were settled, they requested a meeting with [ROOT.GetLeader]. During this meeting, they requested that we be invited into [ROOT.GetFactionName] to ensure global security against the encroaching Fascist threat to all of us. They patiently await our decision."
  
+
+ # States
+
+ STATE_835:0 "Otavin"
+ STATE_836:0 "Tisden"
+ STATE_837:0 "Porside"
+ STATE_838:0 "The Marldun Ranges"
+ STATE_839:0 "Petersrise"
+ STATE_840:0 "Tulomel"
+ STATE_841:0 "Ourailan"
+ STATE_842:0 "Sudi"
+ STATE_843:0 "Oltemor"
+ STATE_844:0 "Nutemor"
+ STATE_845:0 "Baedcove"
+ STATE_846:0 "Whispering Connection"
+ STATE_847:0 "Rockwell"
+ STATE_848:0 "Lords Eye"
+ STATE_849:0 "Outer Tisden"
+ STATE_850:0 "Whaeland"

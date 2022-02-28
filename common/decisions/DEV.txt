@@ -70,3 +70,281 @@ DEV_Magic_Spear_Rebuilding_Project = {
 		}
 	}
 }
+
+DEV_Spread_Revolution_Category = {
+
+	#DEV_Invite_Australia = {
+	#	icon = decision_generic_operation
+
+	#	fire_only_once = yes
+	#	cost = 150
+
+	#	complete_effect = {
+	#		AST = {
+	#			country_event = {
+	#				id = Devils_Cove.8
+	#			}
+	#		}
+	#	}
+	#}
+
+	#DEV_Invite_New_Zealand = {
+	#	icon = decision_generic_operation
+
+	#	fire_only_once = yes
+	#	cost = 150
+
+	#	complete_effect = {
+	#		NZL = {
+	#			country_event = {
+	#				id = Devils_Cove.8
+	#			}
+	#		}
+	#	}
+	#}
+
+	DEV_Encourage_Revolution_In_Australia = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					AST = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					AST = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_NZL = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					NZL = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					NZL = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_Chile = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					CHL = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					CHL = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_PRU = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					PRU = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					PRU = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_ECU = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					ECU = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					ECU = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_COL = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					COL = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					COL = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+
+	DEV_Encourage_Revolution_PHI = {
+		icon = decision_generic_civil_support
+
+		fire_only_once = yes
+		cost = 150
+
+		complete_effect = {
+			random_list = {
+				70 = {
+					PHI = {
+						add_timed_idea = {
+							idea = DEV_Revolution
+							days = 180
+						}
+					}
+				}
+
+				30 = {
+					PHI = {
+						add_opinion_modifier = {
+    						target = DEV
+    						modifier = small_decrease
+						}
+					}
+
+					hidden_effect = {
+						DEV = {
+							add_political_power = -50
+						}
+					}
+				}
+			}
+		}
+	}
+}

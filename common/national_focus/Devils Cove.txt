@@ -584,6 +584,16 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Stabilize_WIA
 		}
+
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}				
+			}
+		}
 	}
 
 	focus = {
@@ -600,6 +610,10 @@ focus_tree = {
 
 		mutually_exclusive = {
 			focus = DEV_Global_Soviet
+		}
+
+		completion_reward = {
+			add_ideas = DEV_Covian_Freedom
 		}
 	}
 
@@ -618,6 +632,15 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = DEV_AntiFascist_Movement
 		}
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+
+			create_faction = DEV_OWA
+			add_to_faction = DEV
+		}
 	}
 
 	focus = {
@@ -631,6 +654,10 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Oceanic_Workers_Alliance
 		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = DEV_Spread_Revolution_Category
+		}
 	}
 
 	focus = {
@@ -643,6 +670,53 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Spread_Revolution
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Oceania_United_TT
+			hidden_effect = {
+				PHI = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				AST = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				NZL = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				CHL = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				PRU = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				ECU = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+
+				COL = {
+					country_event = {
+						id = Devils_Cove.8
+					}
+				}
+			}
 		}
 	}
 
@@ -661,6 +735,77 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = DEV_Oceanic_Workers_Alliance
 		}
+
+		available = {
+			OR = {
+				ENG = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+
+				USA = {
+					is_faction_leader = yes
+					NOT = {
+						has_government = fascism
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					ENG = {
+						is_faction_leader = yes
+					}
+					USA = {
+						is_faction_leader = no
+					}
+				}
+
+				ENG = {
+					country_event = {
+						id = Devils_Cove.9
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					ENG = {
+						is_faction_leader = no
+					}
+					USA = {
+						is_faction_leader = yes
+					}
+				}
+
+				USA = {
+					country_event = {
+						id = Devils_Cove.9
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					ENG = {
+						is_faction_leader = yes
+					}
+					USA = {
+						is_faction_leader = yes
+					}
+				}
+
+				USA = {
+					country_event = {
+						id = Devils_Cove.9
+					}
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -674,6 +819,10 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_AntiFascist_Movement
 		}
+
+		completion_reward = {
+			add_ideas = DEV_PAFF
+		}
 	}
 
 	focus = {
@@ -684,8 +833,27 @@ focus_tree = {
 		y = 1
 		cost = 5
 
+		will_lead_to_war_with = GER
+		will_lead_to_war_with = ITA
+		will_lead_to_war_with = JAP
+
 		prerequisite = {
 			focus = DEV_Pacific_Antifascist_Front
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism
+				}
+
+				ROOT = {
+					create_wargoal = {
+    					type = topple_government
+    					target = PREV
+					}
+				}
+			}
 		}
 	}
 
