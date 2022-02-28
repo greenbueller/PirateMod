@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	DEV_Debts_Paid = {
+		value = 20
+	}
+}

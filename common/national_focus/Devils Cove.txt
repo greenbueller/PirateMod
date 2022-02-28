@@ -845,6 +845,9 @@ focus_tree = {
 			every_country = {
 				limit = {
 					has_government = fascism
+					NOT = {
+						is_in_faction_with = DEV
+					}
 				}
 
 				ROOT = {
@@ -872,6 +875,32 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = DEV_Our_Own_Path
 		}
+
+		completion_reward = {
+			custom_effect_tooltip = DEV_Global_Soviet_TT
+			hidden_effect = {
+				every_country = {
+					limit = {
+						has_government = communism
+						NOT = {
+							has_war_with = DEV
+						}
+					}
+
+					DEV = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = medium_increase
+						}
+					}
+
+					add_opinion_modifier = {
+						target = DEV
+						modifier = medium_increase
+					}
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -884,6 +913,16 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Global_Soviet
+		}
+
+		available = {
+			SOV = {
+				exists = yes
+			}
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = DEV_Soviet_Advisory_Committee
 		}
 	}
 

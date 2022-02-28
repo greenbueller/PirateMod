@@ -364,6 +364,16 @@ ideas = {
 				defense_bonus_against = 0.1
 			}
 		}
+
+		DEV_Debt_Payments = {
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
 	}
 
 

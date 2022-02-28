@@ -105,6 +105,7 @@
  DEV_Covian_Freedom:0 "Covian Freedom"
  DEV_Revolution:0 "Revolutionary Ideals"
  DEV_PAFF:0 "Pacific Anti-Fascist Front"
+ DEV_Debt_Payments:0 "Debt Payments"
 
 
  # Focuses
@@ -274,6 +275,21 @@
  DEV_Encourage_Revolution_COL:0 "Encourage Revolution in Colombia"
  DEV_Encourage_Revolution_PHI:0 "Encourage Revolution in the Philippines"
  DEV_Oceania_United_TT:0 "All Oceanic nations will be invited to our faction"
+ DEV_Global_Soviet_TT:0 "We shall develop our opinion among the Global Soviet."
+ DEV_Debts_Paid:0 "Debts Paid Off"
+ DEV_SOV_ADV_COM:0 "The Soviet Military Academy will prepare troops to protect our homeland."
+ DEV_Debts_Paid_Fully:0 "Our debt to the Soviets will be fully paid off."
+ DEV_SOV_ACA_SCI:0 "Soviet Academy of Science"
+ DEV_Soviet_Advisory_Committee:0 "The Soviet Advisory Committee"
+ DEV_Soviet_Advisory_Committee_desc:0 "The Soviet Advisory Committee is a plan devised between the Tisden Worker's Republic and Soviet Union which will allow for the development of the Tisdenian peoples. However, this development does not come without cost, and the Soviets will require payment after all is said and done..."
+ DEV_Soviet_Military_Academy:0 "Soviet Military Academy"
+ DEV_Soviet_Industrial_Works:0 "Soviet Industrial Works"
+ DEV_Soviet_Academy_Of_Sciences:0 "Soviet Academy of Sciences"
+ DEV_Comintern_Membership:0 "Request Comintern Membership"
+ DEV_Pay_Debts_I:0 "First Debt Payment"
+ DEV_Pay_Debts_II:0 "Second Debt Payment"
+ DEV_Pay_Debts_III:0 "Final Debt Payment"
+ DEV_Impending_Debts:0 "Our Impending Debt"
 
  cat_scout_plane:0 "Scout Plane models"
 

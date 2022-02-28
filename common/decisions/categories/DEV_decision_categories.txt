@@ -23,3 +23,16 @@ DEV_Spread_Revolution_Category = {
 		has_completed_focus = DEV_Spread_Revolution
 	}
 }
+
+DEV_Soviet_Advisory_Committee = {
+	
+	icon = GFX_decision_category_generic_communism
+
+	allowed = {
+		original_tag = DEV
+	}
+
+	visible = {
+		has_completed_focus = DEV_Soviet_Advisory_Committee
+	}
+}

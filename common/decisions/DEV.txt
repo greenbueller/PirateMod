@@ -348,3 +348,321 @@ DEV_Spread_Revolution_Category = {
 		}
 	}
 }
+
+DEV_Soviet_Advisory_Committee = {
+
+	DEV_Soviet_Military_Academy = {
+		icon = decision_generic_military
+
+		fire_only_once = yes
+		cost = 25
+
+		days_remove = 7
+		remove_effect = {
+			army_experience = 15
+			custom_effect_tooltip = DEV_SOV_ADV_COM
+			hidden_effect = {
+				division_template = {
+					name = "Tisden Soviet"
+					division_names_group = DEV_INF_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0	y = 0 }
+						infantry = { x = 1	y = 0 }
+						infantry = { x = 0	y = 1 }
+						infantry = { x = 1	y = 1 }
+						cavalry = { x = 2 y = 0 }
+					}
+				}
+
+				849 = {
+					create_unit = {
+						division = "name = \"Tisden Soviet\" division_template = \"Tisden Soviet\" start_experience_factor = 0.35" owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Tisden Soviet\" division_template = \"Tisden Soviet\" start_experience_factor = 0.35" owner = ROOT
+					}
+				}
+				846 = {
+					create_unit = {
+						division = "name = \"Tisden Soviet\" division_template = \"Tisden Soviet\" start_experience_factor = 0.35" owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Tisden Soviet\" division_template = \"Tisden Soviet\" start_experience_factor = 0.35" owner = ROOT
+					}
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = DEV_Debts
+						}
+					}
+
+					set_country_flag = DEV_Debts
+				}
+			}
+		}
+	}
+
+	DEV_Soviet_Industrial_Works = {
+		icon = decision_generic_military
+
+		fire_only_once = yes
+		cost = 25
+
+		days_remove = 7
+		remove_effect = {
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+
+					NOT = {
+						has_state_flag = undevelopable
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+
+					NOT = {
+						has_state_flag = undevelopable
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+
+					NOT = {
+						has_state_flag = undevelopable
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_Controlled_State = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+
+					NOT = {
+						has_state_flag = undevelopable
+					}
+				}
+
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = DEV_Debts
+						}
+					}
+
+					set_country_flag = DEV_Debts
+				}
+			}
+		}
+	}
+
+	DEV_Soviet_Academy_Of_Sciences = {
+		icon = decision_generic_military
+
+		fire_only_once = yes
+		cost = 25
+
+		days_remove = 7
+		remove_effect = {
+			add_tech_bonus = {
+				name = DEV_SOV_ACA_SCI
+				bonus = 0.5
+				uses = 2
+				category = industry
+				category = electronics
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = DEV_Debts
+						}
+					}
+
+					set_country_flag = DEV_Debts
+				}
+			}
+		}
+	}
+
+	DEV_Comintern_Membership = {
+		icon = decision_generic_military
+
+		fire_only_once = yes
+		cost = 100
+
+		visible = {
+			SOV = {
+				is_faction_leader = yes
+			}
+		}
+
+		complete_effect = {
+			SOV = {
+				country_event = {
+					id = Devils_Cove.9
+				}
+			}
+		}
+	}
+
+	DEV_Pay_Debts_I = {
+		icon = decision_generic_decision
+
+		fire_only_once = yes
+		cost = 50
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = DEV_Debt_Payments
+				days = 30
+			}
+			
+			hidden_effect = {
+				set_country_flag = DEV_Debts_Paid_I
+			}
+		}
+	}
+
+	DEV_Pay_Debts_II = {
+		icon = decision_generic_decision
+
+		fire_only_once = yes
+		cost = 75
+
+		available = {
+			has_decision = DEV_Pay_Debts_II
+			NOT = {
+				has_idea = DEV_Debt_Payments
+			}
+		}
+
+		visible = {
+			has_country_flag = DEV_Debts_Paid_I
+		}
+
+		complete_effect = {
+			remove_mission = DEV_Impending_Debts
+			add_timed_idea = {
+				idea = DEV_Debt_Payments
+				days = 90
+			}
+
+			hidden_effect = {
+				set_country_flag = DEV_Debts_Paid_II
+			}
+		}
+	}
+
+	DEV_Pay_Debts_III = {
+		icon = decision_generic_decision
+
+		fire_only_once = yes
+		cost = 100
+
+		available = {
+			has_decision = DEV_Pay_Debts_II
+			NOT = {
+				has_idea = DEV_Debt_Payments
+			}
+		}
+
+		visible = {
+			has_country_flag = DEV_Debts_Paid_II
+		}
+
+		complete_effect = {
+			set_country_flag = DEV_Debts_Paid_Fully
+		}
+	}
+
+	DEV_Impending_Debts = {
+		icon = decision_generic_ignite_civil_war
+
+		available = {
+			NOT = {
+				is_in_faction_with = SOV
+			}
+
+			has_country_flag = DEV_Debts_Paid_Fully
+		}
+
+		is_good = no
+
+		selectable_mission = no
+
+		days_mission_timeout = 360
+
+		timeout_effect = {
+			SOV = {
+				create_wargoal = {
+					type = annex_everything
+					target = DEV
+				}
+			}
+		}
+
+		complete_effect = {
+			add_political_power = 50
+			SOV = {
+				add_opinion_modifier = {
+					target = DEV
+					modifier = DEV_Debts_Paid
+				}
+			}
+		}
+	}
+}
