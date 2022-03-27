@@ -958,6 +958,12 @@ focus_tree = {
 		prerequisite = {
 			focus = DEV_Blood
 		}
+
+		completion_reward = {
+			country_event = {
+				id = Devils_Cove.10
+			}
+		}
 	}
 
 	focus = {
@@ -970,6 +976,12 @@ focus_tree = {
 
 		prerequisite = {
 			focus = DEV_Strong_Survive
+		}
+
+		completion_reward = {
+			country_event = {
+				id = Devils_Cove.11
+			}
 		}
 	}
 

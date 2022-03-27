@@ -374,6 +374,25 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+
+		DEV_Strong_Survive_Spirit = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.04
+				political_power_factor = 0.02
+				stability_factor = -0.02
+				war_support_factor = 0.02
+			}
+		}
 	}
 
 

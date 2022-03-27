@@ -106,6 +106,7 @@
  DEV_Revolution:0 "Revolutionary Ideals"
  DEV_PAFF:0 "Pacific Anti-Fascist Front"
  DEV_Debt_Payments:0 "Debt Payments"
+ DEV_Strong_Survive_Spirit:0 "The Strong Survive"
 
 
  # Focuses
@@ -327,6 +328,13 @@
  Devils_Cove.8.b:0 "We decline"
  Devils_Cove.9.t:0 "Request to join [ROOT.GetFactionName]"
  Devils_Cove.9.d:0 "Hours ago, a delegation arrived from the Tisden Worker's Republic. After they were settled, they requested a meeting with [ROOT.GetLeader]. During this meeting, they requested that we be invited into [ROOT.GetFactionName] to ensure global security against the encroaching Fascist threat to all of us. They patiently await our decision."
+ Devils_Cove.10.t:0 "The Letters..."
+ Devils_Cove.10.d:0 "After our brave soldiers opened fire on the crowd, they began to scurry away into the plaza around the Congressional building, however one of our Lieutenants found a letter, left completely intact despite the rampaging mob, on the floor near the main doorway. On the letter is a stamp, the same as the man who dared to stand up to his Presidency. The next day, another letter arrives, then another, all with the same stamp. Each letter calls for improvements to the lives of the working class, and stable housing. §tThe people demand change§!."
+ Devils_Cove.10.a:0 "Only the strong shall survive, crush these weaklings!"
+ Devils_Cove.11.t:0 "He Who Serves Best"
+ Devils_Cove.11.d:0 "Following the recent brutal crushing of the Peasantry in their attempt to establish a new regime, Her Majesty Princess Alson has spoken out against President Seavey's actions, calling for her installation as leader of the nation in order to ensure the situation is handled properly. President Seavey has fired back stating that she has no right to the country, being a Monarch of a foreign nation with no formal ties to Devils Cove, despite him being an exiled criminal from abroad. Now the question remains, who shall lead the nation in this turbulent time?"
+ Devils_Cove.11.a:0 "The Exiled One"
+ Devils_Cove.11.b:0 "The Princess"
  
 
  # States

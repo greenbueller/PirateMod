@@ -321,3 +321,42 @@ country_event = {
 		name = Devils_Cove.8.b # Decline
 	}
 }
+
+country_event = {
+	id = Devils_Cove.10
+	title = Devils_Cove.10.t # The Letters...
+	desc = Devils_Cove.10.d
+	picture = GFX_report_event_generic_rally_3
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.10.a # Only the strong shall survive, crush these weaklings!
+
+		add_timed_idea = {
+			idea = DEV_Strong_Survive_Spirit
+			days = 180
+		}
+	}
+}
+
+country_event = {
+	id = Devils_Cove.11
+	title = Devils_Cove.11.t # He Who Serves Best
+	desc = Devils_Cove.11.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = Devils_Cove.11.a # The Exiled One
+
+		unlock_national_focus = DEV_The_Exiled
+	}
+
+	option = {
+		name = Devils_Cove.11.b # Is She
+
+		unlock_national_focus = DEV_Is_She
+	}
+}
